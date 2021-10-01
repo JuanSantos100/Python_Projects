@@ -5,18 +5,17 @@ descrito, exiba a saudação apropriada.
 0-11 bom dia, 12-17 boa tarde, 18-23 boa noite
 """
 def configurandoHorario():
-    horario = input('Digite um horário (0-23): ')
-    if horario > 23:
-        print('Favor, digitar um número entre 0-23')
-    elif horario < 0:
-        print('Favor, digitar um número entre 0-23')
-
-    while horario.isdigit() == False:
-        horario = input('Por favor, digite apenas números inteiros')
+    horario = input('Digite um horario entre 0-23: ')
     horario = int(horario)
+    if horario < 0 or horario > 23:
+        print('Horário deve ser entre 0 e 23')
 
-    if (horario >= 0 and horario <=11 ):
-        print('Bom dia')
+    else:
+        if horario <= 11:
+            print('Bom dia')
+        elif horario <= 17:
+            print('Boa tarde')
+        else:
+            print('Boa noite !!!')
 
-print()
-
+configurandoHorario()
