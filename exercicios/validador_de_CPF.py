@@ -100,7 +100,7 @@ while True:
         if index > 8:
             index -= 9
 
-        print(novo_cpf[index])
+        # print(novo_cpf[index])
         total += int(novo_cpf[index]) * reverse
 
         reverse -=1
@@ -112,12 +112,13 @@ while True:
                 digito = 0
             total = 0
             novo_cpf += str(digito)
+    #Evita sequenciais. Ex: 1111111111, 00000000000...
+    sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
 
-    if cpf == novo_cpf:
+    if cpf == novo_cpf and not sequencia:
         print('Válido')
     else: 
         print('Inválido')
-
     
 
 
