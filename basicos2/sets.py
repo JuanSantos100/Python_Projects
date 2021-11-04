@@ -45,4 +45,13 @@ print(lista[-1])
 print('#'*40, '\n')
 #########################################################################
 
- 
+#Verificação se as duas listas são mais iguais através de sets
+l1 = ['Adilson', 'André', 'Tomaz', 'Lucas']
+l2 = ['Adilson', 'André', 'André', 'André', 'Lucas','Lucas','Lucas', 'Tomaz', 'Tomaz',] 
+
+#OBS: Sets não consideram valores duplicados - por isso as listas são iguais
+
+if set(l1) == set(l2):
+    print('L1 é igual a L2')
+else:
+    print('L1 é diferente de L2') 
