@@ -17,3 +17,7 @@ print('Módulo random')
 from random import randint
 for valor in range(0, 10):
     print(randint(0,10))
+
+import pymysql
+
+print('Importei o pymysql')
